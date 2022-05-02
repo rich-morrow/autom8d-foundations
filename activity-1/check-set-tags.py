@@ -201,3 +201,14 @@ def lambda_handler(event, context):
            },
        ],
        ResultToken=event['resultToken'])
+
+# This code allows the function to run from Cloud9 IDE (loading event json object)      
+import json
+
+with open('./autom8d-foundations/activity-1/event.json') as json_file:
+    event_data = json.load(json_file)
+print("events.json contains:\r\n" + str(event_data))
+context = ""
+
+lambda_handler(event_data,context)
+events_json.close()
