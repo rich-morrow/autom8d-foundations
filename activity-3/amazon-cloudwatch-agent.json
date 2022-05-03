@@ -15,7 +15,8 @@
               {
                 "type": "include",                
                 "expression": "sshd"
-              },
+              }
+            ],
             "timezone": "UTC"
           }
         ]
